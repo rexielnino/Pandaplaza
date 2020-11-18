@@ -1,0 +1,40 @@
+#panda sits down
+# +---------+
+# | f1 - p1 |
+# +---------+
+# | f2      |
+# +---------+
+# | ac      |
+# +---------+
+#
+#        |
+#	 |
+#	 |
+#	\|/
+#        v
+# +---------+
+# | f1      |
+# +---------+
+# | f2      |
+# +---------+
+# | ac - p1 |
+# +---------+
+
+random off
+create timer t1
+create game g1 1 t1
+create lazypanda p1 g1 null null 1 false
+add tickable t1 p1
+
+create field f1 p1
+set a_field p1 f1
+create field f2 null
+create armchair ac
+add tickable t1 ac
+add neighbour f1 f2
+add neighbour f2 f1
+add neighbour f2 ac
+add neighbour ac f2
+
+step p1 f2
+save test8_out.txt

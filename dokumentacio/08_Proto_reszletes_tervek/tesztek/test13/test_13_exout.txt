@@ -1,0 +1,62 @@
+Timer:
+	t1
+	t: p1 p2
+
+Game:
+	g1
+	pn: 2
+	t: t1
+	tfs:
+	ps:
+
+Panda:
+	p1
+	g: g1
+	l: o1
+	f: f3
+
+Panda:
+	p2
+	g: g1
+	l: o1
+	f: w2
+
+Orangutan:
+	o1
+	g: g1
+	f: f4
+	pf: w1
+	cd: 1
+	p: p1 p2
+
+Field:
+	f1
+	a: null
+	n: f2
+
+Field:
+	f2
+	a: null
+	n: f1 f3
+
+Field:
+	f3
+	a: p1
+	n: f2 w1
+
+Wardrobe:
+	w1
+	wp: w2
+	a: null
+	n: f3
+
+Wardrobe:
+	w2
+	wp: w1
+	a: p2
+	n: f4
+
+Field:
+	f4
+	a: o1
+	n: w2

@@ -1,0 +1,43 @@
+# 3. Panda falls in Hole
+# Rövid leírás
+# A panda egy szomszédos gyenge csempére lép, aminek az életereje 0.
+# Teszt célja
+# A panda rálép egy törött gyenge csempére, aminek hatására meghal.
+
+#   +---------+
+#   | f1 - p1 |
+#   +---------+
+#   |   wt1    |
+#   +---------+
+#        
+#       |
+#		|
+#		|
+#	   \|/
+#       ˇ
+#
+#   +---------+
+#   |   f1    |
+#   +---------+
+#   | wt1- p1 |   p1 dies :(
+#   +---------+
+
+random off
+
+create timer t1
+create game g1 1 t1
+create panda p1 g1 null null
+
+add tickable t1 p1
+
+
+create field f1 p1
+set a_field p1 f1
+
+create weaktile wt1 null 0
+
+add neighbour f1 wt1
+add neighbour wt1 f1
+
+step p1 wt1
+save test3_out.txt

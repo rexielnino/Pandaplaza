@@ -1,0 +1,64 @@
+
+A pályát:
+1 : p1(0,4) p2(4,5)  kozep(3,4)
+2 : ..
+
+Szomszéd:
+1: 2 3 4 6
+
+-------------------
+bázisvektor
+forgatás lásd képen, a tömb.hoszz() -1 -ig megyünk, ha nem jó akkor a automatikusan a legutolsó
+
+
+
+
+A lépés problémája a visitor patternne megoldható:
+  Csempére lép egy Lusta Panda (hogy egy példán mutatssuk be a leülést is):
+  
+  tick()
+	lep()
+		szog randomizálás !!!! legjobb esetben
+		Mezo m = aminAll.getSzomszedBySzog(sz)
+		m.accept(this)
+			allat.steppedOnCsempe(this);
+				if (cs.isFoglalt()) {return;}
+				aminAll = csempe;
+				
+				---------------------------------- leultetés része, de hasonló a játékgép és a csokiautomata is
+				szom[] = aminAll.getAllSzomszed();
+				if (energia == 0 && szom[] metszet fotelek[] != null)
+					leul(f);
+						f.setPanda(this);
+						aminAll = f;
+						
+				-------------------------------- jatekgep csilingel
+				szom[] = aminAll.getAllSzomszed();
+				if (szom[] metszet gepek[] != null)
+					if (g.csilingel) 
+						letgo()
+						
+				-------------------------------- ugras
+					allat.steppedOnTorekenyCsempe kell a 9.sorban
+					
+					
+					
+					
+					
+					
+
+					
+					
+Ütközés: két panda rátesztelünk hogy foglalt-e a mező (if allatRajta != null)
+
+ütközés orángután részéről: lép a szokásos lásd fent, ha foglalt a mező akkor:
+			all.CollideWith(this)   ahol this az Orángután
+			Orángutánban ott return
+			pandán meg befűz
+			
+			
+
+			
+TODO:
+	befűzés
+	Game, timer, FAL (széle miatt), szekrény, bejárat, kijárat, lyuk

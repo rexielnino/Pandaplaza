@@ -1,0 +1,41 @@
+#panda jumps - hole
+# +---------+
+# | f1 - p1 |
+# +---------+
+# | w1      |
+# +---------+
+# | cm      |
+# +---------+
+#
+#        |
+#	 |
+#	 |
+#	\|/
+#        v
+# +---------+
+# | f1      |
+# +---------+
+# | w1      |
+# +---------+
+# | cm      |
+# +---------+
+
+random off
+create timer t1
+create game g1 1 t1
+create chocolatepanda p1 g1 null null
+add tickable t1 p1
+
+create field f1 p1
+set a_field p1 f1
+create weaktile w1 null 2
+create chocolatemachine cm true
+
+add neighbour f1 w1
+add neighbour w1 f1
+add neighbour w1 cm
+add neighbour cm w1
+
+step p1 w1
+tick cm
+save test7b_out.txt

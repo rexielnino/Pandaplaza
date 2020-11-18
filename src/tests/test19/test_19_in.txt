@@ -1,0 +1,39 @@
+﻿# 19. Orangutan release pandas
+# Rövid leírás
+# Az orángután felszabadítja a pandáit.
+# Teszt célja
+# Az orángután elengedi az összes pandáját.
+
+# +---------+
+# | f1 - p2 | 
+# +---------+
+# | f2 - p1 |
+# +---------+
+# | f3 - o1 |
+# +---------+
+
+random off
+
+create timer t1
+create game g1 2 t1
+create orangutan o1 g1 null
+create panda p1 g1 null null
+create panda p2 g1 null null
+
+create field f1 p2
+create field f2 p1
+create field f3 o1
+add o1 p1
+add o1 p2
+
+set a_field o1 f3
+set a_field p1 f2
+set a_field p2 f1
+
+add neighbour f1 f2
+add neighbour f2 f1
+add neighbour f2 f3
+add neighbour f3 f2
+
+release pandas o1
+save test19_out.txt

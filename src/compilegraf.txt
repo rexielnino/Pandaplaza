@@ -1,0 +1,17 @@
+set path=C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files\Java\jre1.8.0_201/bin;%path%
+mkdir build
+javac -d build\ src\model\*.java src\view\*.java src\controller\*.java
+
+java -cp resources;build pandaplaza.model.Main
+
+
+
+
+
+Fordítás:
+
+resources és source folder szintján vagyunk
+
+set path=C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files\Java\jre1.8.0_201/bin;%path% && mkdir build && javac -d build\ src\model\*.java src\view\*.java src\controller\*.java && copy src\view\*.css build\pandaplaza\view && copy src\view\*.fxml build\pandaplaza\view
+
+java -cp resources;build pandaplaza.model.Main

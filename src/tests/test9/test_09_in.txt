@@ -1,0 +1,59 @@
+#panda got scared
+# +---------+
+# | f1 - p1 |
+# +---------+
+# | f2 - gp |
+# +---------+-----------+
+# | f3 - o1 | gm        |
+# +---------+-----------+
+# | f4      |
+# +---------+
+#
+#        |
+#	 |
+#	 |
+#	\|/
+#        v
+# +---------+
+# | f1      |
+# +---------+
+# | f2 - p1 |
+# +---------+-----------+
+# | f3 - gp | gm        |
+# +---------+-----------+
+# | f4 - o1 |
+# +---------+
+
+random off
+create timer t1
+create game g1 2 t1
+create panda p1 g1 null null
+create gamblerpanda gp g1 null null
+create orangutan o1 g1 null
+add tickable t1 p1
+add tickable t1 gp
+add panda o1 p1
+add panda o1 gp
+
+create field f1 p1
+set a_field p1 f1
+create field f2 gp
+set a_field gp f2
+create field f3 o1
+set a_field o1 f3
+create gamemachine gm true
+add tickable t1 gm
+create field f4 null
+
+add neighbour f1 f2
+add neighbour f2 f1
+add neighbour f2 f3
+add neighbour f3 f2
+add neighbour f3 f4
+add neighbour f3 gm
+add neighbour gm f3
+add neighbour f4 f3
+
+step o1 f4
+tick gm
+save test9_out.txt

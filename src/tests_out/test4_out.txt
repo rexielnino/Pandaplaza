@@ -1,0 +1,49 @@
+Timer:
+t1
+t: p1
+
+Game:
+g1
+pn: 1
+t: t1
+tfs: 
+ps:
+
+Panda:
+p1
+g: g1
+l: null
+f: wd2
+
+Field:
+f1
+a: null
+n: wd1
+
+Wardrobe:
+wd1
+wp: wd2
+a: null
+n: f1 f2
+
+Field:
+f2
+a: null
+n: wd1 f3
+
+Field:
+f3
+a: null
+n: f2 wd2
+
+Wardrobe:
+wd2
+wp: wd1
+a: p1
+n: f3 f4
+
+Field:
+f4
+a: null
+n: wd2
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="gameover" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@GameOverScene.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button id="backtomenubtn" onAction="#backtomenubtn_click" layoutX="727.0" layoutY="822.0" mnemonicParsing="false" prefHeight="124.0" prefWidth="468.0" styleClass="backtomenubtn" text="Back to the menu" textAlignment="CENTER">
+         <font>
+            <Font size="33.0" />
+         </font></Button>
+      <Label id="lGameOver" layoutX="768.0" layoutY="92.0" text="Game Over" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font size="78.0" />
+         </font>
+      </Label>
+      <Label id="lPlayer1" alignment="CENTER" contentDisplay="CENTER" layoutX="194.0" layoutY="378.0" text="Player 1" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font size="78.0" />
+         </font>
+      </Label>
+      <Label id="lPlayer2" alignment="CENTER" contentDisplay="CENTER" layoutX="1425.0" layoutY="378.0" text="Player 2" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font size="78.0" />
+         </font>
+      </Label>
+      <Label id="lPlayer1Points" fx:id="player1PointsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="491.0" prefHeight="113.0" prefWidth="479.0" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font size="78.0" />
+         </font>
+      </Label>
+      <Label id="lPlayer2Points" fx:id="player2PointsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="1327.0" layoutY="492.0" prefHeight="113.0" prefWidth="479.0" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font size="78.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

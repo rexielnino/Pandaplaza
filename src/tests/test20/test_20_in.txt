@@ -1,0 +1,61 @@
+﻿# 20. Orangutan hits orangutan
+# Rövid leírás
+# Egy 0 cooldownnnal és pandasorral nem rendelkező orángután (o1) nekimegy egy másik, pandasorral rendelkező orángutánnak (o2).
+# Teszt célja
+# Az O1 nekimegy o2-nek, aminek hatására helyet cserélnek.
+# O1 megszerzi o2 pandasorát.
+# O2 cooldownja 3-ra nő.
+
+# +---------+
+# | f1 - p1 | 
+# +---------+
+# | f2 - p2 |
+# +---------+---------+
+# | f3 - o2 | f4 - o1 |
+# +---------+---------+
+
+#
+#       |
+#		|
+#		|
+#	   \|/
+#       ˇ
+
+# +---------+
+# | f1 - p1 | 
+# +---------+
+# | f2 - p2 |
+# +---------+---------+
+# | f3 - o1 | f4 - o2 |
+# +---------+---------+
+
+random off
+
+create timer t1
+create game g1 2 t1
+create orangutan o1 g1 null
+create orangutan o2 g1 null
+create panda p1 g1 null null
+create panda p2 g1 null null
+add panda o2 p2
+add panda o2 p1
+
+create field f1 p1
+create field f2 p2
+create field f3 o2
+create field f4 o1
+
+set a_field o1 f4
+set a_field o2 f3
+set a_field p1 f1
+set a_field p2 f2
+
+add neighbour f1 f2
+add neighbour f2 f1
+add neighbour f2 f3
+add neighbour f3 f2
+add neighbour f3 f4
+add neighbour f4 f3
+
+step o1 f3
+save test20_out.txt

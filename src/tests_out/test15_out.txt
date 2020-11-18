@@ -1,0 +1,68 @@
+Timer:
+t1
+t:
+
+Game:
+g1
+pn: 0
+t: t1
+tfs: 
+ps: player1
+
+Orangutan:
+o1
+g: g1
+f: ent1
+pf: null
+cd: 0
+p:
+
+Panda:
+p1
+g: null
+l: null
+f: null
+
+Panda:
+p2
+g: null
+l: null
+f: null
+
+Player:
+player1
+o: o1
+pts: 20
+
+Entrance:
+ent1
+a: o1
+n: f1
+
+Field:
+f1
+a: null
+n: ent1 f2
+
+Field:
+f2
+a: null
+n: f1 f3
+
+Field:
+f3
+a: null
+n: f2 f4
+
+Field:
+f4
+a: null
+n: f3 ex1
+
+Exit:
+ex1
+g: g1
+a: null
+ep: ent1
+n: f4
+

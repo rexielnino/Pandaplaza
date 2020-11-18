@@ -1,0 +1,28 @@
+Timer:
+t1
+t: p1
+
+Game:
+g1
+pn: 1
+t: t1
+tfs: 
+ps:
+
+Panda:
+p1
+g: g1
+l: null
+f: wt1
+
+Field:
+f1
+a: null
+n: wt1
+
+WeakTile:
+wt1
+a: p1
+l: 19
+n: f1
+

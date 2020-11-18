@@ -1,0 +1,58 @@
+Timer:
+	t1
+	t: p1 gp gm
+
+Game:
+	g1
+	pn: 2
+	t: t1
+	tfs:
+	ps:
+
+Panda:
+	p1
+	g: g1
+	l: null
+	f: f2
+
+GamblerPanda:
+	gp
+	g: g1
+	l: null
+	f: f3
+
+Orangutan:
+	o1
+	g: g1
+	f: f4
+	pf: f3
+	cd: 0
+	p:
+
+Field:
+	f1
+	a: null
+	n: f2
+
+Field:
+	f2
+	a: p1
+	n: f1 f3
+
+Field:
+	f3
+	a: gp
+	n: f2 f4 gm
+
+GameMachine:
+	gm
+	a: null
+	r: true
+	tc: 1
+	n: f3
+
+Field:
+	f4
+	a: o1
+	n: f3
+

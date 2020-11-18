@@ -1,0 +1,67 @@
+# 18/b Orangutan hit Panda with line
+# Rövid leírás
+# Az orángután nekimegy egy pandának, aminek van sora.
+# Teszt célja
+# Az orángután ütközik a pandával.
+# A panda felbontja a sorát, és az orángután befűzi őt a saját sorának elejére.
+
+# 			+---------+
+# 			| f1 - p1 | 
+# 			+---------+
+# 			| f2 - o1 |
+# +---------+---------+---------+
+# | f4 - p3 | f3 - p2 | f5 - o2 |
+# +---------+---------+---------+
+
+#
+#       |
+#		|
+#		|
+#	   \|/
+#       ˇ
+
+# 			+---------+
+# 			| f1 - p1 | 
+# 			+---------+
+# 			| f2 - p2 |
+# +---------+---------+---------+
+# | f4 - p3 | f3 - o1 | f5 - o2 |
+# +---------+---------+---------+
+
+random off
+
+create timer t1
+create game g1 3 t1
+create orangutan o1 g1 null
+create orangutan o2 g1 null
+create panda p1 g1 o1 null
+create panda p2 g1 o1 null
+create panda p3 g1 o1 null
+
+add panda o1 p1
+add panda o2 p3
+add panda o2 p2
+
+create field f1 p1
+create field f2 o1
+create field f3 p2
+create field f4 p3
+create field f5 o2
+
+set a_field o1 f2
+set a_field o2 f5
+set a_field p1 f1
+set a_field p2 f3
+set a_field p3 f4
+
+add neighbour f1 f2
+add neighbour f2 f1
+add neighbour f2 f3
+add neighbour f3 f2
+add neighbour f3 f4
+add neighbour f3 f5
+add neighbour f4 f3
+add neighbour f5 f3
+
+step o1 f3
+save test18b_out.txt

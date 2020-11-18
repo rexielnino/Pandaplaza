@@ -1,0 +1,29 @@
+Timer:
+	t1
+	t:
+
+Game:
+	g1
+	pn: 0
+	t: t1
+	tfs:
+	ps:
+
+Orangutan:
+	o1
+	g: g1
+	f: f2
+	pf: f1
+	cd: 1
+	p:
+
+Field:
+	f1
+	a: null
+	n: f2
+
+Field:
+	f2
+	a: o1
+	n: f1
+

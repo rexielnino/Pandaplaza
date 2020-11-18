@@ -1,0 +1,96 @@
+# 4. Panda step on free Wardrobe
+# Rövid leírás
+# A panda egy szomszédos szekrény típusú mezőre lép, aminek a párja szabad.
+# Teszt célja
+# A panda rálép egy szekrényre, aminek a párján jön ki.
+
+
+# +---------+
+# | f1 - p1 |
+# +---------+
+# | wd1     |
+# +---------+
+# | f2      |
+# +---------+
+# | f3      |
+# +---------+
+# | wd2     |
+# +---------+
+# | f4      |
+# +---------+
+#
+#       |
+#		|
+#		|
+#	   \|/
+#       ˇ
+
+# +---------+
+# | f1      |
+# +---------+
+# | wd1     |
+# +---------+
+# | f2      |
+# +---------+
+# | f3      |
+# +---------+
+# | wd2- p1 |
+# +---------+
+# | f4      |
+# +---------+
+
+random off
+
+create timer t1
+create game g1 1 t1
+create panda p1 g1 null null
+add tickable t1 p1
+
+# fields
+create field f1 p1
+set a_field p1 f1
+
+create wardrobe wd1 null null
+
+create field f2 null
+create field f3 null
+
+create wardrobe wd2 wd1 null
+set w_pair wd1 wd2
+
+create field f4 null
+
+add neighbour f1 wd1
+add neighbour wd1 f1
+add neighbour wd1 f2
+add neighbour f2 wd1
+add neighbour f2 f3
+add neighbour f3 f2
+add neighbour f3 wd2
+add neighbour wd2 f3
+add neighbour wd2 f4
+add neighbour f4 wd2
+
+
+step p1 wd1
+save test4_out.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

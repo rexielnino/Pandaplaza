@@ -1,0 +1,27 @@
+Timer:
+t1
+t: p1
+
+Game:
+g1
+pn: 1
+t: t1
+tfs: 
+ps:
+
+Panda:
+p1
+g: g1
+l: null
+f: f2
+
+Field:
+f1
+a: null
+n: f2
+
+Field:
+f2
+a: p1
+n: f1
+

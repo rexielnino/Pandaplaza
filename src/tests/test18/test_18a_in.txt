@@ -1,0 +1,54 @@
+﻿# 18/a Orangutan with 0 cd hit Panda without line
+# Rövid leírás
+# A 0 cooldownnal rendelkező orángután nekimegy egy pandának, aminek nincs sora.
+# Teszt célja
+# Az orángután ütközik a pandával és befűzi a pandát a sora elejére.
+
+# +---------+
+# | f1 - p1 | 
+# +---------+
+# | f2 - o1 |
+# +---------+
+# | f3 - p2 |
+# +---------+
+#
+#       |
+#		|
+#		|
+#	   \|/
+#       ˇ
+
+# +---------+
+# | f1 - p1 |
+# +---------+
+# | f2 - p2 |
+# +---------+
+# | f3 - o1 |
+# +---------+
+
+random off
+
+create timer t1
+create game g1 2 t1
+create orangutan o1 g1 null
+create panda p1 g1 null null
+create panda p2 g1 null null
+add panda o1 p1
+
+add tickable t1 p2
+
+create field f1 p1
+create field f2 o1
+create field f3 p2
+
+set a_field o1 f2
+set a_field p1 f1
+set a_field p2 f3
+
+add neighbour f1 f2
+add neighbour f2 f1
+add neighbour f2 f3
+add neighbour f3 f2
+
+step o1 f3
+save test18a_out.txt

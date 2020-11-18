@@ -1,0 +1,59 @@
+Timer:
+	t1
+	t:
+
+Game:
+    g1
+	pn: 0
+	t: t1
+	tfs:
+	ps:
+
+Orangutan:
+    o1
+	g: g1
+	f: f1
+	pf: null
+	cd: 0
+	p:
+	
+Orangutan:
+    o2
+	g: g1
+	f: wd2
+	pf: null
+	cd: 0
+	p:
+
+Field:
+    f1
+	a: o1
+	n: wd1
+
+Wardrobe:
+    wd1
+	wp: wd2
+	a: null
+	n: f1 f2
+
+Field:
+    f2
+	a: null
+	n: wd1 f3
+
+Field:
+    f3
+	a: null
+	n: f2 wd2
+
+Wardrobe:
+    wd2
+	wp: wd1
+	a: o2
+	n: f3 f4
+
+Field:
+    f4
+	a: null
+	n: wd2
+

@@ -1,0 +1,52 @@
+Timer:
+t1
+t: p1 p2
+
+Game:
+g1
+pn: 2
+t: t1
+tfs: 
+ps:
+
+Orangutan:
+o1
+g: null
+f: null
+pf: f3
+cd: 0
+p:
+
+Panda:
+p1
+g: g1
+l: null
+f: f3
+
+Panda:
+p2
+g: g1
+l: null
+f: f2
+
+Field:
+f1
+a: null
+n: f2
+
+Field:
+f2
+a: p2
+n: f1 f3
+
+Field:
+f3
+a: p1
+n: f2 wt
+
+WeakTile:
+wt
+a: null
+l: 0
+n: f3
+

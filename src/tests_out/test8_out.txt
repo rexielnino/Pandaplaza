@@ -1,0 +1,34 @@
+Timer:
+t1
+t: p1 ac
+
+Game:
+g1
+pn: 1
+t: t1
+tfs: 
+ps:
+
+LazyPanda:
+p1
+g: g1
+l: null
+f: ac
+e: 2
+s: true
+
+Field:
+f1
+a: null
+n: f2
+
+Field:
+f2
+a: null
+n: f1 ac
+
+Armchair:
+ac
+a: p1
+n: f2
+

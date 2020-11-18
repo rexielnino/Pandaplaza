@@ -1,0 +1,30 @@
+Timer:
+t1
+t:
+
+Game:
+g1
+pn: 0
+t: t1
+tfs: 
+ps:
+
+Orangutan:
+o1
+g: null
+f: null
+pf: f1
+cd: 1
+p:
+
+Field:
+f1
+a: null
+n: w1
+
+WeakTile:
+w1
+a: null
+l: 0
+n: f1
+

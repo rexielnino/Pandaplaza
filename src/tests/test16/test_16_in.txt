@@ -1,0 +1,63 @@
+﻿# 16. Orangutan Dies
+# Rövid leírás
+# A pandasorral rendelkező orángután meghal.
+# Teszt célja
+# Az orángután meghal, és ennek hatására elengedi a pandáit.
+
+# +---------+
+# | f1 - p2 |
+# +---------+
+# | f2 - p1 |
+# +---------+
+# | f3 - o1 |
+# +---------+
+# | wt      |
+# +---------+
+#
+#       |
+#		|
+#		|
+#	   \|/
+#       ˇ
+
+# +---------+
+# | f1      |
+# +---------+
+# | f2 - p2 |
+# +---------+
+# | f3 - p1 |
+# +---------+
+# | wt      |
+# +---------+
+
+random off
+
+create timer t1
+create game g1 2 t1
+create orangutan o1 g1 null
+create panda p1 g1 o1 null
+create panda p2 g1 o1 null
+#add tickable t1 p1
+#add tickable t1 p2
+add panda o1 p2
+add panda o1 p1
+
+#Fields
+create field f1 p2
+create field f2 p1
+create field f3 o1
+create weaktile wt null 0
+
+set a_field o1 f3
+set a_field p1 f2
+set a_field p2 f1
+
+add neighbour f1 f2
+add neighbour f2 f1
+add neighbour f2 f3
+add neighbour f3 f2
+add neighbour f3 wt
+add neighbour wt f3
+
+step o1 wt
+save test16_out.txt

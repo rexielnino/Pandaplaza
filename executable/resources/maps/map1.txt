@@ -1,0 +1,402 @@
+scalecoords 44
+translatex 900
+translatey 620
+resolution 1920 1080
+
+# make game and timer with 6 pandas
+create timer t1
+create game g1 6 t1
+
+# create the pandas
+#            name game leader field
+create panda p1 g1 null null
+create lazypanda p2 g1 null null 0 false
+create gamblerpanda p3 g1 null null
+create chocolatepanda p4 g1 null null
+create panda p5 g1 null null
+create panda p6 g1 null null
+
+# add all pandas to the timer
+add tickable t1 p1
+add tickable t1 p2
+add tickable t1 p3
+add tickable t1 p4
+add tickable t1 p5
+add tickable t1 p6
+
+# create the fields
+
+# H - közepű - kék        F1
+#            name anim rgb ----------------------vertices----------------------------   center
+create field f1 null 0 0 1 -12.33 8.82 -14.4 7.64 -13.92 5.29 -11.19 5.15 -10.43 7.33 -12.65 6.77
+
+
+#L közepű  - zöld        F2
+create field f2 null 0 1 0 -7.87 7.02 -10.43 7.33 -11.19 5.15 -9.29 3.56 -7.27 4.86 -9.15 5.57
+
+
+#Q közepű - zöld      F3
+create field f3 p1 0 1 0 -6.11 7.05 -7.27 4.86 -5.33 3.31 -3.03 4.76 -3.7 6.98 -5.19 5.43
+set a_field p1 f3
+
+# U közepű - kék    F4
+create field f4 null 0 0 1 -3.7 6.98 -3.03 4.76 -0.49 4.58 0.22 6.67 -1.65 8.29 -1.79 6.28
+
+#A1 közepű- zöld F5
+create field f5 p2 0 1 0 0.22 6.67 -0.49 4.58 1.67 2.88 3.72 4.23 3.08 6.59 1.56 4.86
+set a_field p2 f5
+
+#E1 közepű - kék  F6
+create field f6 null 0 0 1 5.13 8.01 3.08 6.59 3.72 4.23 6.62 4.16 7.25 6.38 5.17 5.96
+
+#I1 közepű - zöld  F7
+create field f7 null 0 1 0 7.25 6.38 6.62 4.16 8.53 2.57 10.61 3.77 8.31 4.37
+
+#M1 közepű - kék   F8
+create field f8 null 0 0 1 8.99 10.24 7.25 6.38 10.61 3.77 14 6 12.95 10.06 10.86 7.3
+
+#O1 közepű - sárga F9
+create field f9 null 1 1 0 12.95 10.06 14 6 16.13 7.55 15.53 9.92 14.47 8.47
+
+#S1 közepű - kék F10
+create field f10 p6 0 0 1 14 6 14.89 3.73 17.4 3.59 18.32 5.71 16.13 7.55 16.2 5.57
+set a_field p6 f10
+
+#U1 közepű - zöld   F11
+create field f11 p3 0 1 0 10.61 3.77 12.66 2.25 14.89 3.73 14 6 12.95 4.09
+set a_field p3 f11
+
+#Z1 közepű - kék   F12
+create field f12 null 0 0 1 8.53 2.57 9.23 0.23 11.74 0.02 12.66 2.25 10.61 3.77 10.51 1.89
+
+#E2 közepű - sárga F13
+create gamemachine f13 false 1 1 0 3.72 4.23 1.67 2.88 1.39 -1.92 3.37 -3.51 6.12 -3.66 8.28 -2.21 9.23 0.23 8.53 2.57 6.62 4.16 5.27 0.44
+
+#J2 közepű - piros F14
+create field f14 null 1 0 0 -3.03 4.76 -5.33 3.31 -6.04 0.9 -5.51 -1.71 -3.63 -3.23 -0.81 -3.3 1.39 -1.92 1.67 2.88 -0.49 4.58 -2.04 0.69
+
+#L2 közepű kék F15
+create field f15 null 0 0 1 -9.29 3.56 -8.69 1.08 -6.04 0.9 -5.33 3.31 -7.27 4.86 -7.31 2.64
+
+#S2 közepű piros F16
+create entrance f16 1 0 0 -13.92 5.29 -16 4 -16.99 1.75 -16.36 -1 -14.45 -2.63 -11.73 -2.67 -9.68 -1.29 -8.69 1.08 -9.29 3.56 -11.19 5.15 -13 1.4
+
+#U2 közepű zöld F17
+create field f17 null 0 1 0 -8.69 1.08 -9.68 -1.29 -7.56 -2.95 -5.51 -1.71 -6.04 0.9 -7.63 -0.97
+
+#Z2 közepű zöld  F18
+create field f18 null 0 1 0 9.23 0.23 8.28 -2.21 10.26 -3.83 12.42 -2.38 11.74 0.02 10.36 -1.64
+
+#F3 közepű piros  F19
+create exit f19 f16 g1 1 0 0 14.89 3.73 12.66 2.25 11.74 0.02 12.42 -2.38 14.36 -4.01 17.19 -4.04 19.03 -2.84 20.12 -0.58 19.45 1.79 17.4 3.59 16.23 -0.33
+
+#J3 közepű zöld   F20
+create field f20 null 0 1 0 -18.51 -2.45 -17.84 -4.89 -15.23 -4.89 -14.45 -2.63 -16.36 -1 -16.61 -3.09
+
+#M3 közepű kék   F21
+create field f21 null 0 0 1 -14.45 -2.63 -15.23 -4.89 -13.21 -6.59 -11.13 -5.25 -11.73 -2.67 -13.14 -4.4
+
+#N3 közepű sárga   F22
+create field f22 null 1 1 0 -11.73 -2.67 -11.13 -5.25 -7.56 -2.95 -9.68 -1.29 -10.07 -3.02
+
+#P3 közepű kék   F23
+create field f23 null 0 0 1 -5.51 -1.71 -7.56 -2.95 -4.48 -5.42 -3.63 -3.23 -5.22 -3.34
+
+#U3 közepű zöld F24 
+create field f24 p4 0 1 0 -3.63 -3.23 -4.48 -5.42 -2.37 -7.09 0.13 -5.71 -0.81 -3.3 -2.29 -4.92
+set a_field p4 f24
+
+#S3 közepű kék F25
+create field f25 null 0 0 1 -0.81 -3.3 0.13 -5.71 2.73 -5.71 3.37 -3.51 1.39 -1.92 1.29 -4.01
+
+
+#Z3 közepű zöld F26
+create field f26 null 0 1 0 3.37 -3.51 2.73 -5.71 4.72 -7.34 6.78 -5.97 6.12 -3.66 4.61 -5.13
+
+#A4 közepű kék F27
+create field f27 null 0 0 1 6.12 -3.66 6.78 -5.97 10.26 -3.83 8.28 -2.21 8 -4
+
+#C4 közepű sárga F28
+create field f28 null 1 1 0 12.42 -2.38 10.26 -3.83 13.44 -6.15 14.36 -4.01 12.79 -4.19
+
+#F4 közepű kék F29
+create field f29 null 0 0 1 14.36 -4.01 13.44 -6.15 15.61 -7.85 17.6 -6.33 17.19 -4.04 15.68 -5.57
+
+#I4 közepű sárga F30
+create wardrobe f30 null null 1 1 0 19.03 -2.84 17.19 -4.04 17.6 -6.33 20.24 -6.65 21.11 -4.38 19.12 -4.85
+
+#L4 közepű zöld F31
+create field f31 null 0 1 0 -13.21 -6.59 -12.53 -8.97 -9.93 -9.04 -11.13 -5.25 -11.63 -7.31
+
+#N4 közepű piros F32
+create weaktile f32 null 20 1 0 0 -11.13 -5.25 -9.93 -9.04 -5.95 -9.11 -4.48 -5.42 -7.56 -2.95 -8 -6
+
+#P4 közepű kék F33
+create field f33 null 0 0 1 -4.48 -5.42 -5.95 -9.11 -3.27 -9.37 -2.37 -7.09 -4.32 -7.56
+
+#V4 közepű piros F34
+create chocolatemachine f34 false 1 0 0 0.13 -5.71 -2.37 -7.09 -3.27 -9.37 -2.55 -11.94 -0.52 -13.67 2.26 -13.82 4.36 -12.3 5.3 -9.84 4.72 -7.34 2.73 -5.71 1.18 -9.55
+
+#Z4 közepű kék F35
+create field f35 null 0 0 1 4.72 -7.34 5.3 -9.84 8 -10 6.78 -5.97 6.35 -8.17
+
+#B5 közepű piros  F36
+create weaktile f36 null 20 1 0 0 10.26 -3.83 6.78 -5.97 8 -10 12 -10 13.44 -6.15 10.37 -7.2
+
+#D5 közepű zöld F37
+create field f37 null 0 1 0 13.44 -6.15 12 -10 14.74 -10.27 15.61 -7.85 13.98 -8.46
+
+#H5 közepű sárga F38
+create armchair f38 1 1 0 12 -10 11.09 -12.44 13.15 -14 15.25 -12.66 14.74 -10.27 13.37 -11.83
+
+#J5 közepű zöld F39
+create field f39 p5 0 1 0 8 -10 8.56 -12.3 11.09 -12.44 12 -10 9.93 -10.81
+set a_field p5 f39
+
+#L5 közepű sárga F40
+create field f40 null 1 1 0 5.3 -9.84 4.36 -12.3 6.42 -13.89 8.56 -12.3 8 -10 6.57 -11.72
+
+#O5 közepű sárga F41
+create wardrobe f41 f30 null 1 1 0 -9.93 -9.04 -9.24 -11.68 -6.56 -11.65 -5.95 -9.11 -7.83 -10.27
+set w_pair f30 f41
+
+#Q5 közepű zöld F42
+create field f42 null 0 1 0 -5.95 -9.11 -6.56 -11.65 -4.72 -13.24 -2.44 -11.94 -3.27 -9.37 -4.57 -11.28
+
+
+#--------------------------------#
+# ADD NEIGHBOUR
+
+add neighbour f1 f2
+add neighbour f1 f16
+
+add neighbour f2 f1
+add neighbour f2 f16
+add neighbour f2 f15
+
+add neighbour f3 f15
+add neighbour f3 f4
+add neighbour f3 f14
+
+add neighbour f4 f3
+add neighbour f4 f5
+add neighbour f4 f14
+
+add neighbour f5 f4
+add neighbour f5 f14
+add neighbour f5 f13
+add neighbour f5 f6
+
+add neighbour f6 f5
+add neighbour f6 f7
+add neighbour f6 f13
+
+add neighbour f7 f6
+add neighbour f7 f13
+add neighbour f7 f12
+add neighbour f7 f8
+
+add neighbour f8 f7
+add neighbour f8 f11
+add neighbour f8 f9
+
+add neighbour f9 f8
+add neighbour f9 f10
+
+add neighbour f10 f9
+add neighbour f10 f11
+add neighbour f10 f19
+
+add neighbour f11 f10
+add neighbour f11 f8
+add neighbour f11 f12
+add neighbour f11 f19
+
+add neighbour f12 f7
+add neighbour f12 f11
+add neighbour f12 f13
+add neighbour f12 f18
+add neighbour f12 f19
+
+add neighbour f13 f6
+add neighbour f13 f5
+add neighbour f13 f14
+add neighbour f13 f25
+add neighbour f13 f26
+add neighbour f13 f27
+add neighbour f13 f18
+add neighbour f13 f12
+add neighbour f13 f7
+
+add neighbour f14 f4
+add neighbour f14 f3
+add neighbour f14 f15
+add neighbour f14 f17
+add neighbour f14 f23
+add neighbour f14 f24
+add neighbour f14 f25
+add neighbour f14 f13
+add neighbour f14 f5
+
+add neighbour f15 f2
+add neighbour f15 f3
+add neighbour f15 f16
+add neighbour f15 f14
+add neighbour f15 f17
+ 
+add neighbour f16 f1
+add neighbour f16 f2
+add neighbour f16 f15
+add neighbour f16 f17
+add neighbour f16 f22
+add neighbour f16 f21
+add neighbour f16 f20
+
+add neighbour f17 f15
+add neighbour f17 f16
+add neighbour f17 f22
+add neighbour f17 f23
+add neighbour f17 f14
+
+add neighbour f18 f12
+add neighbour f18 f13
+add neighbour f18 f27
+add neighbour f18 f28
+add neighbour f18 f19
+
+add neighbour f19 f10
+add neighbour f19 f11
+add neighbour f19 f12
+add neighbour f19 f18
+add neighbour f19 f28
+add neighbour f19 f29
+add neighbour f19 f30
+
+add neighbour f20 f16
+add neighbour f20 f21
+
+add neighbour f21 f20
+add neighbour f21 f16
+add neighbour f21 f22
+add neighbour f21 f31
+
+add neighbour f22 f17
+add neighbour f22 f16
+add neighbour f22 f21
+add neighbour f22 f32
+
+add neighbour f23 f14
+add neighbour f23 f17
+add neighbour f23 f32
+add neighbour f23 f24
+
+add neighbour f24 f14
+add neighbour f24 f23
+add neighbour f24 f33
+add neighbour f24 f34
+add neighbour f24 f25
+  
+add neighbour f25 f13
+add neighbour f25 f14
+add neighbour f25 f24
+add neighbour f25 f34
+add neighbour f25 f26
+  
+add neighbour f26 f13
+add neighbour f26 f25
+add neighbour f26 f34
+add neighbour f26 f35
+add neighbour f26 f27
+  
+add neighbour f27 f13
+add neighbour f27 f26
+add neighbour f27 f36
+add neighbour f27 f18
+  
+add neighbour f28 f19
+add neighbour f28 f18
+add neighbour f28 f36
+add neighbour f28 f29
+  
+add neighbour f29 f30
+add neighbour f29 f19
+add neighbour f29 f28
+add neighbour f29 f37
+  
+add neighbour f30 f19
+add neighbour f30 f29
+  
+add neighbour f31 f21
+add neighbour f31 f32
+  
+add neighbour f32 f22
+add neighbour f32 f31
+add neighbour f32 f41
+add neighbour f32 f33
+add neighbour f32 f23
+
+add neighbour f33 f24
+add neighbour f33 f32
+add neighbour f33 f42
+add neighbour f33 f34
+
+add neighbour f34 f25
+add neighbour f34 f24
+add neighbour f34 f33
+add neighbour f34 f42
+add neighbour f34 f40
+add neighbour f34 f35
+add neighbour f34 f26
+
+add neighbour f35 f26
+add neighbour f35 f34
+add neighbour f35 f40
+add neighbour f35 f36
+
+add neighbour f36 f28
+add neighbour f36 f27
+add neighbour f36 f35
+add neighbour f36 f39
+add neighbour f36 f37
+
+add neighbour f37 f29
+add neighbour f37 f36
+add neighbour f37 f38
+
+add neighbour f38 f37
+add neighbour f38 f39
+
+add neighbour f39 f36
+add neighbour f39 f40
+add neighbour f39 f38
+
+add neighbour f40 f35
+add neighbour f40 f34
+add neighbour f40 f39
+
+add neighbour f41 f42
+add neighbour f41 f32
+
+add neighbour f42 f34
+add neighbour f42 f33
+add neighbour f42 f41
+
+
+
+#----------------------------#
+# ADD TICKABLES BESIDES PANDAS
+
+# armchair
+add tickable t1 f38
+
+# chocolatemachine
+add tickable t1 f34
+
+#gamemachine
+add tickable t1 f13
+
+
+
+# mark the fields for the orangutan starting position
+mark orangutanfield1 f20
+mark orangutanfield2 f9

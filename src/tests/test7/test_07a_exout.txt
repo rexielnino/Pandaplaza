@@ -1,0 +1,35 @@
+Timer:
+	t1
+	t: p1
+
+Game:
+	g1
+	pn: 1
+	t: t1
+	tfs:
+	ps:
+
+ChocolatePanda:
+	p1
+	g: g1
+	l: null
+	f: w1
+
+Field:
+	f1
+	a: null
+	n: w1
+
+WeakTile:
+	w1
+	a: p1
+	l: 1
+	n: f1 cm
+
+ChocolateMachine:
+	cm
+	a: null
+	w: true
+	tc: 1
+	n: w1
+

@@ -1,0 +1,31 @@
+@font-face {
+    src: url('../../../resources/font/Roboto-Medium.ttf');
+}
+
+{
+    -fx-primary : #2A2E37;
+    -fx-secondary : #FFFF8D;
+    -fx-primarytext : #B2B2B2;
+    -fx-blue: #1976D2;
+    -fx-red: #FF0000;
+    -fx-color-1:#1976D2;
+    -fx-background-color: #bcbcbc
+;
+}
+
+.backtomenubtn {
+    -fx-font-family: "Roboto Medium";
+    -fx-font-size: 40;
+
+    -fx-text-fill: -fx-primarytext;
+    -fx-background-color: -fx-primary;
+
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-font-size: 20pt;
+}
+
+.backtomenubtn:hover {
+    -fx-background-color: #525459;
+    -fx-text-fill: -fx-primary;
+}

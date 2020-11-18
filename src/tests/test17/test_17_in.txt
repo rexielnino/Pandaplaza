@@ -1,0 +1,63 @@
+﻿# 17. Orangutan lead Pandas
+# Rövid leírás
+# A pandasorral rendelkező orángután maga után húzza a pandáit.
+# Teszt célja
+# Az orángután lépése után maga után húzza a pandáit, aminek hatására minden panda egyet előre lép az orángután irányába.
+
+# +---------+
+# | f1 - p2 |
+# +---------+
+# | f2 - p1 |
+# +---------+
+# | f3 - o1 |
+# +---------+
+# | f4      |
+# +---------+
+#
+#       |
+#		|
+#		|
+#	   \|/
+#       ˇ
+
+# +---------+
+# | f1      |
+# +---------+
+# | f2 - p2 |
+# +---------+
+# | f3 - p1 |
+# +---------+
+# | f4 - o1 |
+# +---------+
+
+random off
+
+create timer t1
+create game g1 2 t1
+create orangutan o1 g1 null
+create panda p1 g1 o1 null
+create panda p2 g1 o1 null
+
+#add panda a sor elejére fűzi -> ezért p2 lesz először
+add panda o1 p2
+add panda o1 p1
+
+#Fields
+create field f1 p2
+create field f2 p1
+create field f3 o1
+create field f4 null
+
+set a_field o1 f3
+set a_field p1 f2
+set a_field p2 f1
+
+add neighbour f1 f2
+add neighbour f2 f1
+add neighbour f2 f3
+add neighbour f3 f2
+add neighbour f3 f4
+add neighbour f4 f3
+
+step o1 f4
+save test17_out.txt
